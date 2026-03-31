@@ -98,63 +98,83 @@
   "lokaler": [],
   "konfigurasjoner": [
     {
-      "navn": "Kompakt",
-      "areal": "1 000 m²",
-      "undertittel": "Effektiv løsning for mindre virksomheter",
-      "beskrivelse": "Kompakt og smart arealløsning tilpasset virksomheter som trenger et moderne lager- og kombinasjonslokale. Med 9 meters takhøyde, egen kjøreport og fleksibel planløsning får du alt du trenger under ett tak.",
+      "navn": "Vestbygg U.etg",
+      "bygg": "Vestbygget",
+      "areal": "2 100 m²",
+      "undertittel": "Lager — 4 kjøreporter",
+      "beskrivelse": "Stort lagerlokale i underetasjen av Vestbygget med direkte adkomst via 4 kjøreporter. Ideelt for logistikk, distribusjon og lagring med behov for effektiv varemottak. Høy takhøyde og god planløsning for trucktrafikk og pallhåndtering.",
       "accent": "#c8a951",
       "bilde": "Bilder/strip-1.png",
-      "galleri": ["Bilder/strip-1.png", "Bilder/hero.png", "Bilder/strip-2.jpg", "Bilder/strip-3.jpg"],
+      "galleri": ["Bilder/strip-1.png", "Bilder/plantegning-a.jpg", "Bilder/Strip-5.jpg", "Bilder/Strip-6.jpg"],
       "specs": [
-        { "label": "Areal", "verdi": "1 000 m²" },
-        { "label": "Takhøyde", "verdi": "9 meter" },
-        { "label": "Kjøreport", "verdi": "Ja" },
-        { "label": "Energiklasse", "verdi": "A" }
+        { "label": "Areal", "verdi": "2 100 m²" },
+        { "label": "Type", "verdi": "Lager" },
+        { "label": "Kjøreporter", "verdi": "4 stk" },
+        { "label": "Etasje", "verdi": "U.etg" }
       ]
     },
     {
-      "navn": "Mellomstor",
-      "areal": "1 500 m²",
-      "undertittel": "Balansert areal for voksende bedrifter",
-      "beskrivelse": "Et allsidig lokale som gir plass til lager, kontor og varemottak i samme bygg. Ideelt for virksomheter i vekst som trenger fleksibilitet og rom for utvidelse. Inkluderer kontorseksjon med ventilasjon og moderne standard.",
+      "navn": "Vestbygg 1.etg",
+      "bygg": "Vestbygget",
+      "areal": "570 m²",
+      "undertittel": "Lager — kompakt og fleksibelt",
+      "beskrivelse": "Kompakt lagerlokale i 1. etasje av Vestbygget. Perfekt for mindre virksomheter som trenger lager nær kontor, eller som tilleggsareal for leietakere i andre etasjer. Enkel tilgang og god takhøyde.",
       "accent": "#5B8FA8",
       "bilde": "Bilder/hero.png",
-      "galleri": ["Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-2.jpg", "Bilder/strip-3.jpg"],
+      "galleri": ["Bilder/hero.png", "Bilder/plantegning-a.jpg", "Bilder/Strip-7.jpg", "Bilder/Strip-8.jpg"],
       "specs": [
-        { "label": "Areal", "verdi": "1 500 m²" },
-        { "label": "Takhøyde", "verdi": "9 meter" },
-        { "label": "Kontor", "verdi": "Inkludert" },
-        { "label": "Energiklasse", "verdi": "A" }
+        { "label": "Areal", "verdi": "570 m²" },
+        { "label": "Type", "verdi": "Lager" },
+        { "label": "Kjøreporter", "verdi": "—" },
+        { "label": "Etasje", "verdi": "1. etg" }
       ]
     },
     {
-      "navn": "Stor",
-      "areal": "2 000 m²",
-      "undertittel": "Romslig løsning for etablerte virksomheter",
-      "beskrivelse": "Stort og fleksibelt areal med plass til omfattende lager- og logistikkoperasjoner. Planløsningen kan tilpasses med soner for lager, produksjon, showroom og kontor. To kjøreporter for effektiv varemottak og distribusjon.",
+      "navn": "Vestbygg 4.etg",
+      "bygg": "Vestbygget",
+      "areal": "1 400 m²",
+      "undertittel": "Kontor — moderne arbeidsplass",
+      "beskrivelse": "Moderne kontorlokale i 4. etasje av Vestbygget med utsikt og dagslys. Ventilasjonsanlegg, fleksibel planløsning og tilgang til felles kantine, treningsrom og garderober. Ideelt for bedrifter som ønsker kontor i tilknytning til lager.",
       "accent": "#059669",
-      "bilde": "Bilder/strip-2.jpg",
-      "galleri": ["Bilder/strip-2.jpg", "Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-3.jpg"],
+      "bilde": "Bilder/Strip-2.jpg",
+      "galleri": ["Bilder/Strip-2.jpg", "Bilder/plantegning-b.jpg", "Bilder/Strip-9.jpg", "Bilder/Strip-3.jpg"],
+      "specs": [
+        { "label": "Areal", "verdi": "1 400 m²" },
+        { "label": "Type", "verdi": "Kontor" },
+        { "label": "Fasiliteter", "verdi": "Kantine, gym" },
+        { "label": "Etasje", "verdi": "4. etg" }
+      ]
+    },
+    {
+      "navn": "Østbygg U.etg",
+      "bygg": "Østbygget",
+      "areal": "2 000 m²",
+      "undertittel": "Lager — 9m takhøyde, 6 kjøreporter",
+      "beskrivelse": "Stort høytlager i underetasjen av Østbygget med imponerende 9 meters takhøyde og 6 kjøreporter. Optimalt for logistikk, tredjepartslagring og virksomheter med store volumer. Effektiv planløsning for truck og pallhåndtering.",
+      "accent": "#1e3a5f",
+      "bilde": "Bilder/Strip-3.jpg",
+      "galleri": ["Bilder/Strip-3.jpg", "Bilder/plantegning-b.jpg", "Bilder/Strip-4.jpg", "Bilder/strip-1.png"],
       "specs": [
         { "label": "Areal", "verdi": "2 000 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },
-        { "label": "Kjøreporter", "verdi": "2 stk" },
-        { "label": "Energiklasse", "verdi": "A" }
+        { "label": "Kjøreporter", "verdi": "6 stk" },
+        { "label": "Etasje", "verdi": "U.etg" }
       ]
     },
     {
-      "navn": "Maksimal",
-      "areal": "3 000 m²",
-      "undertittel": "Hele etasjen – maksimal fleksibilitet",
-      "beskrivelse": "Full etasje med ubegrenset tilpasningsmuligheter. For virksomheter som trenger et stort sammenhengende areal til lager, logistikk, produksjon eller kombinert drift. Skreddersydde løsninger for kontor, personalrom og tekniske rom.",
-      "accent": "#1e3a5f",
-      "bilde": "Bilder/strip-3.jpg",
-      "galleri": ["Bilder/strip-3.jpg", "Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-2.jpg"],
+      "navn": "Østbygg 1.etg",
+      "bygg": "Østbygget",
+      "areal": "2 000 m²",
+      "undertittel": "Lager — 9m takhøyde, 6 kjøreporter",
+      "beskrivelse": "Identisk med underetasjen — 2 000 m² høytlager med 9 meters takhøyde og 6 kjøreporter. Kan leies separat eller sammen med U.etg for totalt 4 000 m² sammenhengende lagerareal. Perfekt for større logistikkoperasjoner.",
+      "accent": "#7c3aed",
+      "bilde": "Bilder/Strip-4.jpg",
+      "galleri": ["Bilder/Strip-4.jpg", "Bilder/plantegning-a.jpg", "Bilder/Strip-5.jpg", "Bilder/hero.png"],
       "specs": [
-        { "label": "Areal", "verdi": "3 000 m²" },
+        { "label": "Areal", "verdi": "2 000 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },
-        { "label": "Kjøreporter", "verdi": "3 stk" },
-        { "label": "Energiklasse", "verdi": "A" }
+        { "label": "Kjøreporter", "verdi": "6 stk" },
+        { "label": "Etasje", "verdi": "1. etg" }
       ]
     }
   ],

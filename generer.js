@@ -162,6 +162,12 @@ function genererKarusell(konfigurasjoner) {
     <script>
       var EC_SLIDES = ${JSON.stringify(konfigurasjoner)};
     </script>
+    <div style="text-align: center; padding: 2rem 2rem 0;">
+      <a href="etasjeplan.html" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.72rem; color: var(--dark); border-color: var(--border); display: inline-flex; align-items: center; gap: 0.5rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Se alle lokaler &amp; etasjeplan
+      </a>
+    </div>
     <div class="ec-wrapper">
       <div class="ec-bg-wash" style="background: radial-gradient(ellipse at 70% 50%, ${first.accent}18 0%, transparent 70%);"></div>
       <div class="ec-inner">
@@ -225,6 +231,7 @@ function byggSide(malNavn) {
   html = html.replace('{{BELIGGENHET_KORT}}', genererBeliggenhetKort(config.beliggenhet.kort));
   html = html.replace('{{LOKALER_KORT}}', genererLokalerKort(config.lokaler));
   html = html.replace('{{KARUSELL_HTML}}', genererKarusell(config.konfigurasjoner));
+  html = html.replace('{{ETASJEPLAN_DATA}}', `var FP_DATA = ${JSON.stringify(config.konfigurasjoner || [])};`);
 
   // Erstatt enkle plassholdere
   html = replacePlaceholders(html, config);
@@ -255,6 +262,7 @@ console.log('Bygger HTML-sider...');
 byggSide('index.html');
 byggSide('lokaler.html');
 byggSide('kontakt.html');
+byggSide('etasjeplan.html');
 
 console.log('');
 console.log('Bygger CSS...');

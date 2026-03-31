@@ -296,4 +296,71 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // ===== ETASJEPLAN INTERAKTIVITET =====
+  if (typeof FP_DATA !== 'undefined' && FP_DATA.length > 0) {
+    const zones = document.querySelectorAll('.fp-zone');
+    const legends = document.querySelectorAll('.fp-legend-item');
+    const detailEmpty = document.querySelector('.fp-detail-empty');
+    const detailContent = document.getElementById('fpDetailContent');
+
+    function selectZone(idx) {
+      if (idx < 0 || idx >= FP_DATA.length) return;
+      const d = FP_DATA[idx];
+
+      // Highlight SVG zone
+      zones.forEach(z => {
+        z.classList.remove('active');
+        z.style.strokeWidth = '0';
+      });
+      document.querySelectorAll(`.fp-zone[data-zone="${idx}"]`).forEach(z => {
+        z.classList.add('active');
+        z.style.strokeWidth = '2';
+      });
+
+      // Highlight legend
+      legends.forEach(l => l.classList.remove('active'));
+      if (legends[idx]) legends[idx].classList.add('active');
+
+      // Fill detail panel
+      if (detailEmpty) detailEmpty.style.display = 'none';
+      if (detailContent) detailContent.style.display = 'block';
+
+      document.getElementById('fpBadge').textContent = 'Ledig';
+      document.getElementById('fpTitle').textContent = d.navn;
+      document.getElementById('fpSub').textContent = d.areal + ' — ' + d.undertittel;
+      document.getElementById('fpSub').style.color = d.accent;
+      document.getElementById('fpDesc').textContent = d.beskrivelse;
+
+      const specsEl = document.getElementById('fpSpecs');
+      specsEl.innerHTML = d.specs.map(s =>
+        `<div class="fp-detail-spec"><div class="fp-detail-spec-label">${s.label}</div><div class="fp-detail-spec-value">${s.verdi}</div></div>`
+      ).join('');
+
+      const galEl = document.getElementById('fpGallery');
+      galEl.innerHTML = (d.galleri || []).map((src, i) =>
+        `<img src="${src}" alt="${d.navn} bilde ${i+1}" onclick="if(window.openLightbox) openLightbox('${src}')">`
+      ).join('');
+    }
+
+    // Click on SVG zones
+    zones.forEach(z => {
+      z.addEventListener('click', () => selectZone(parseInt(z.dataset.zone)));
+    });
+
+    // Click on legend items
+    legends.forEach((l, i) => {
+      l.addEventListener('click', () => selectZone(parseInt(l.dataset.zone)));
+    });
+
+    // Hover effect on SVG
+    zones.forEach(z => {
+      z.addEventListener('mouseenter', () => {
+        if (!z.classList.contains('active')) z.style.strokeWidth = '1.5';
+      });
+      z.addEventListener('mouseleave', () => {
+        if (!z.classList.contains('active')) z.style.strokeWidth = '0';
+      });
+    });
+  }
 });
