@@ -33,10 +33,17 @@
 
   <!-- HERO + OM PROSJEKTET — sticky hero med tekst-overlay -->
   <div class="hero-parallax-wrap">
-    <!-- Sticky hero-bilde bak -->
+    <!-- Sticky hero-bilde bak med slideshow -->
     <div class="hero-sticky">
-      <div class="hero-image"></div>
+      <div class="hero-slideshow">
+        <div class="hero-slide active" style="background-image: url('{{bilder.hero}}');"></div>
+        <div class="hero-slide" style="background-image: url('Bilder/strip-5.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('Bilder/strip-1.png');"></div>
+      </div>
       <div class="hero-overlay hero-overlay--subtle"></div>
+      <div class="hero-headline">
+        <h1 class="hero-headline-text">Last mile lager sentralt i Oslo</h1>
+      </div>
       <div class="hero-scroll-hint">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </div>
@@ -45,44 +52,34 @@
     <!-- Tomt spacer-lag = fullscreen hero uten tekst -->
     <div class="hero-spacer"></div>
 
-    <!-- Tekst-overlay som scroller over hero -->
+    <!-- Tekst-overlay som scroller over hero — glassbakgrunn -->
     <section class="hero-text-overlay">
-      <div class="hero-text-content">
-        <span class="overline" style="color: var(--steel-light);">{{eiendom.hero_badge}}</span>
-        <h1>{{eiendom.navn}}</h1>
-        <p class="hero-text-sub">{{eiendom.kort_beskrivelse}}</p>
-
-        <h3 style="margin-top: 2.5rem;">{{eiendom.om_tittel}}</h3>
-        {{OM_AVSNITT}}
-
-        <div class="key-facts" style="margin-top: 2.5rem;">
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 21v-4h6v4M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
-            </div>
-            <div class="fact-label">Status</div>
-            <div class="fact-value" style="color: var(--accent);">Nybygg</div>
+      <div class="hero-text-content hero-text-split">
+        <!-- Venstre: tekst -->
+        <div class="hero-text-left">
+          <span class="overline" style="color: var(--steel-light);">{{eiendom.hero_badge}}</span>
+          <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--dark); margin: 0.5rem 0 1rem;">{{eiendom.navn}}</h2>
+          <p class="hero-text-sub">{{eiendom.kort_beskrivelse}}</p>
+          <h3 style="margin-top: 2rem;">{{eiendom.om_tittel}}</h3>
+          {{OM_AVSNITT}}
+        </div>
+        <!-- Høyre: glassmorfisme selling points -->
+        <div class="hero-glass-grid">
+          <div class="glass-card">
+            <div class="glass-card-value" style="color: var(--accent);">Nybygg</div>
+            <div class="glass-card-label">Status</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
-            </div>
-            <div class="fact-label">BREEAM</div>
-            <div class="fact-value" style="color: var(--green-muted);">{{eiendom.breeam}}</div>
+          <div class="glass-card">
+            <div class="glass-card-label" style="margin-bottom: 0.15rem;">BREEAM</div>
+            <div class="glass-card-value" style="color: var(--green-muted);">{{eiendom.breeam}}</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <div class="fact-label">Energiklasse</div>
-            <div class="fact-value" style="color: var(--green-muted);">{{eiendom.energikarakter}}</div>
+          <div class="glass-card glass-card--energy">
+            <img src="Bilder/energiklasse-a.svg" alt="Energiklasse A" class="glass-card-img">
+            <div class="glass-card-label">Energiklasse</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="fact-label">Ferdigstillelse</div>
-            <div class="fact-value">{{eiendom.ferdigstillelse}}</div>
+          <div class="glass-card">
+            <div class="glass-card-value">{{eiendom.ferdigstillelse}}</div>
+            <div class="glass-card-label">Ferdigstillelse</div>
           </div>
         </div>
       </div>

@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ===== HERO SLIDESHOW =====
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let heroIdx = 0;
+    setInterval(() => {
+      heroSlides[heroIdx].classList.remove('active');
+      heroIdx = (heroIdx + 1) % heroSlides.length;
+      heroSlides[heroIdx].classList.add('active');
+    }, 5000);
+  }
+
   // ===== CONTACT FORM =====
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -151,6 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
           cta.style.color = (s.accent === '#c8a951' || s.accent === '#059669') ? '#0f172a' : '#ffffff';
         }
 
+        // Filmstrip thumbnails
+        const filmstrip = $('.ec-filmstrip');
+        if (filmstrip) {
+          const gallery = s.galleri || [s.bilde];
+          filmstrip.innerHTML = gallery.map((src, i) =>
+            '<button class="ec-thumb' + (i === 0 ? ' active' : '') + '" data-src="' + src + '"><img src="' + src + '" alt="Bilde ' + (i+1) + '"></button>'
+          ).join('');
+          // Thumb click -> swap main image
+          filmstrip.querySelectorAll('.ec-thumb').forEach(btn => {
+            btn.addEventListener('click', () => {
+              $('.ec-main-img').src = btn.dataset.src;
+              filmstrip.querySelectorAll('.ec-thumb').forEach(t => t.classList.remove('active'));
+              btn.classList.add('active');
+            });
+          });
+        }
+
         // Progress bar
         $$('.ec-progress-item').forEach((item, i) => {
           item.classList.toggle('active', i === ecIndex);
@@ -211,5 +239,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Init first slide
     ecUpdate();
+
+    // ===== LIGHTBOX =====
+    const lightbox = document.getElementById('ecLightbox');
+    if (lightbox) {
+      let lbImages = [];
+      let lbIndex = 0;
+      const lbImg = lightbox.querySelector('.ec-lightbox-img');
+      const lbStrip = lightbox.querySelector('.ec-lightbox-strip');
+
+      function lbOpen(gallery, startIdx) {
+        lbImages = gallery;
+        lbIndex = startIdx || 0;
+        lbRender();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function lbClose() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function lbRender() {
+        lbImg.src = lbImages[lbIndex];
+        lbStrip.innerHTML = lbImages.map((src, i) =>
+          '<button class="ec-lthumb' + (i === lbIndex ? ' active' : '') + '"><img src="' + src + '" alt="Bilde ' + (i+1) + '"></button>'
+        ).join('');
+        lbStrip.querySelectorAll('.ec-lthumb').forEach((btn, i) => {
+          btn.addEventListener('click', () => { lbIndex = i; lbRender(); });
+        });
+      }
+
+      lightbox.querySelector('.ec-lightbox-close').addEventListener('click', lbClose);
+      lightbox.querySelector('.ec-lightbox-prev').addEventListener('click', () => { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; lbRender(); });
+      lightbox.querySelector('.ec-lightbox-next').addEventListener('click', () => { lbIndex = (lbIndex + 1) % lbImages.length; lbRender(); });
+      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lbClose(); });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') lbClose();
+        if (e.key === 'ArrowLeft') { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; lbRender(); }
+        if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % lbImages.length; lbRender(); }
+      });
+
+      // Click main image or thumb -> open lightbox
+      ecWrapper.addEventListener('click', (e) => {
+        const mainImg = e.target.closest('.ec-main-img');
+        if (mainImg) {
+          const s = slides[ecIndex];
+          const gallery = s.galleri || [s.bilde];
+          const activeThumb = ecWrapper.querySelector('.ec-thumb.active');
+          const clickedSrc = activeThumb ? activeThumb.dataset.src : s.bilde;
+          const startIdx = gallery.indexOf(clickedSrc);
+          lbOpen(gallery, startIdx >= 0 ? startIdx : 0);
+        }
+      });
+    }
   }
 });

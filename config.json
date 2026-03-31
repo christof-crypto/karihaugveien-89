@@ -18,7 +18,7 @@
     "sidetittel_forside": "Karihaugveien 89 – Nytt lager- og næringsbygg til leie i Oslo",
     "sidetittel_lokaler": "Lokaler til leie | K89",
     "sidetittel_kontakt": "Kontakt oss | K89",
-    "breeam": "Very Good",
+    "breeam": "Excellent",
     "ferdigstillelse": "2026"
   },
   "design": {
@@ -104,6 +104,7 @@
       "beskrivelse": "Kompakt og smart arealløsning tilpasset virksomheter som trenger et moderne lager- og kombinasjonslokale. Med 9 meters takhøyde, egen kjøreport og fleksibel planløsning får du alt du trenger under ett tak.",
       "accent": "#c8a951",
       "bilde": "Bilder/strip-1.png",
+      "galleri": ["Bilder/strip-1.png", "Bilder/hero.png", "Bilder/strip-2.jpg", "Bilder/strip-3.jpg"],
       "specs": [
         { "label": "Areal", "verdi": "1 000 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },
@@ -118,6 +119,7 @@
       "beskrivelse": "Et allsidig lokale som gir plass til lager, kontor og varemottak i samme bygg. Ideelt for virksomheter i vekst som trenger fleksibilitet og rom for utvidelse. Inkluderer kontorseksjon med ventilasjon og moderne standard.",
       "accent": "#5B8FA8",
       "bilde": "Bilder/hero.png",
+      "galleri": ["Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-2.jpg", "Bilder/strip-3.jpg"],
       "specs": [
         { "label": "Areal", "verdi": "1 500 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },
@@ -132,6 +134,7 @@
       "beskrivelse": "Stort og fleksibelt areal med plass til omfattende lager- og logistikkoperasjoner. Planløsningen kan tilpasses med soner for lager, produksjon, showroom og kontor. To kjøreporter for effektiv varemottak og distribusjon.",
       "accent": "#059669",
       "bilde": "Bilder/strip-2.jpg",
+      "galleri": ["Bilder/strip-2.jpg", "Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-3.jpg"],
       "specs": [
         { "label": "Areal", "verdi": "2 000 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },
@@ -146,6 +149,7 @@
       "beskrivelse": "Full etasje med ubegrenset tilpasningsmuligheter. For virksomheter som trenger et stort sammenhengende areal til lager, logistikk, produksjon eller kombinert drift. Skreddersydde løsninger for kontor, personalrom og tekniske rom.",
       "accent": "#1e3a5f",
       "bilde": "Bilder/strip-3.jpg",
+      "galleri": ["Bilder/strip-3.jpg", "Bilder/hero.png", "Bilder/strip-1.png", "Bilder/strip-2.jpg"],
       "specs": [
         { "label": "Areal", "verdi": "3 000 m²" },
         { "label": "Takhøyde", "verdi": "9 meter" },

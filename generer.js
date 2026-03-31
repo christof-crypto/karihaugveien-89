@@ -180,16 +180,29 @@ function genererKarusell(konfigurasjoner) {
         </div>
         <div class="ec-image-container">
           <div class="ec-image-frame visible">
-            <img src="${first.bilde}" alt="${first.navn} – ${first.areal}">
+            <img src="${first.bilde}" alt="${first.navn} – ${first.areal}" class="ec-main-img">
             <div class="ec-image-overlay" style="background: linear-gradient(135deg, ${first.accent}22 0%, transparent 50%);"></div>
           </div>
           <div class="ec-frame-corner ec-frame-corner--tl" style="border-color: ${first.accent};"></div>
           <div class="ec-frame-corner ec-frame-corner--br" style="border-color: ${first.accent};"></div>
+          <div class="ec-filmstrip">
+${(first.galleri || [first.bilde]).map((src, i) =>
+  `            <button class="ec-thumb${i === 0 ? ' active' : ''}" data-src="${src}"><img src="${src}" alt="Bilde ${i+1}"></button>`
+).join('\n')}
+          </div>
         </div>
       </div>
       <div class="ec-progress-bar">
 ${progressItems}
       </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="ec-lightbox" id="ecLightbox">
+      <button class="ec-lightbox-close" aria-label="Lukk">&times;</button>
+      <button class="ec-lightbox-prev" aria-label="Forrige">&#8249;</button>
+      <button class="ec-lightbox-next" aria-label="Neste">&#8250;</button>
+      <img class="ec-lightbox-img" src="" alt="Forstørret bilde">
+      <div class="ec-lightbox-strip"></div>
     </div>
   </section>`;
 }

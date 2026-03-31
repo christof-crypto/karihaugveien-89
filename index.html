@@ -33,10 +33,17 @@
 
   <!-- HERO + OM PROSJEKTET — sticky hero med tekst-overlay -->
   <div class="hero-parallax-wrap">
-    <!-- Sticky hero-bilde bak -->
+    <!-- Sticky hero-bilde bak med slideshow -->
     <div class="hero-sticky">
-      <div class="hero-image"></div>
+      <div class="hero-slideshow">
+        <div class="hero-slide active" style="background-image: url('Bilder/hero.png');"></div>
+        <div class="hero-slide" style="background-image: url('Bilder/strip-5.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('Bilder/strip-1.png');"></div>
+      </div>
       <div class="hero-overlay hero-overlay--subtle"></div>
+      <div class="hero-headline">
+        <h1 class="hero-headline-text">Last mile lager sentralt i Oslo</h1>
+      </div>
       <div class="hero-scroll-hint">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </div>
@@ -45,46 +52,36 @@
     <!-- Tomt spacer-lag = fullscreen hero uten tekst -->
     <div class="hero-spacer"></div>
 
-    <!-- Tekst-overlay som scroller over hero -->
+    <!-- Tekst-overlay som scroller over hero — glassbakgrunn -->
     <section class="hero-text-overlay">
-      <div class="hero-text-content">
-        <span class="overline" style="color: var(--steel-light);">Nybygg 2026 · OroEiendom</span>
-        <h1>Karihaugveien 89</h1>
-        <p class="hero-text-sub">Nytt lager- og kombinasjonsbygg på Karihaugen i Oslo</p>
-
-        <h3 style="margin-top: 2.5rem;">Nybygg med høye miljøambisjoner</h3>
-                  <p>Karihaugveien 89 er et nybyggprosjekt som leverer moderne lager- og kombinasjonslokaler med høy standard. Bygget oppnår BREEAM-sertifisering og energiklasse A, og setter ny standard for bærekraftige næringsbygg på Karihaugen.</p>
+      <div class="hero-text-content hero-text-split">
+        <!-- Venstre: tekst -->
+        <div class="hero-text-left">
+          <span class="overline" style="color: var(--steel-light);">Nybygg 2026 · OroEiendom</span>
+          <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--dark); margin: 0.5rem 0 1rem;">Karihaugveien 89</h2>
+          <p class="hero-text-sub">Nytt lager- og kombinasjonsbygg på Karihaugen i Oslo</p>
+          <h3 style="margin-top: 2rem;">Nybygg med høye miljøambisjoner</h3>
+                    <p>Karihaugveien 89 er et nybyggprosjekt som leverer moderne lager- og kombinasjonslokaler med høy standard. Bygget oppnår BREEAM-sertifisering og energiklasse A, og setter ny standard for bærekraftige næringsbygg på Karihaugen.</p>
           <p>Lokalene kan tilpasses etter leietakers behov, og det er mulighet for både mindre og større arealer (fra 1 000 m²). Bygget er prosjektert med fokus på lavt energiforbruk, godt inneklima og fleksible planløsninger.</p>
           <p>Bygget forvaltes av OroEiendom, som utvikler og forvalter attraktive næringseiendommer i Oslo-regionen med fokus på kvalitet, bærekraft og langsiktig verdiskaping.</p>
-
-        <div class="key-facts" style="margin-top: 2.5rem;">
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 21v-4h6v4M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
-            </div>
-            <div class="fact-label">Status</div>
-            <div class="fact-value" style="color: var(--accent);">Nybygg</div>
+        </div>
+        <!-- Høyre: glassmorfisme selling points -->
+        <div class="hero-glass-grid">
+          <div class="glass-card">
+            <div class="glass-card-value" style="color: var(--accent);">Nybygg</div>
+            <div class="glass-card-label">Status</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
-            </div>
-            <div class="fact-label">BREEAM</div>
-            <div class="fact-value" style="color: var(--green-muted);">Very Good</div>
+          <div class="glass-card">
+            <div class="glass-card-label" style="margin-bottom: 0.15rem;">BREEAM</div>
+            <div class="glass-card-value" style="color: var(--green-muted);">Excellent</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <div class="fact-label">Energiklasse</div>
-            <div class="fact-value" style="color: var(--green-muted);">A</div>
+          <div class="glass-card glass-card--energy">
+            <img src="Bilder/energiklasse-a.svg" alt="Energiklasse A" class="glass-card-img">
+            <div class="glass-card-label">Energiklasse</div>
           </div>
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="fact-label">Ferdigstillelse</div>
-            <div class="fact-value">2026</div>
+          <div class="glass-card">
+            <div class="glass-card-value">2026</div>
+            <div class="glass-card-label">Ferdigstillelse</div>
           </div>
         </div>
       </div>
@@ -95,7 +92,7 @@
   <section id="lokaler">
       <section class="section" style="padding: 0;">
     <script>
-      var EC_SLIDES = [{"navn":"Kompakt","areal":"1 000 m²","undertittel":"Effektiv løsning for mindre virksomheter","beskrivelse":"Kompakt og smart arealløsning tilpasset virksomheter som trenger et moderne lager- og kombinasjonslokale. Med 9 meters takhøyde, egen kjøreport og fleksibel planløsning får du alt du trenger under ett tak.","accent":"#c8a951","bilde":"Bilder/strip-1.png","specs":[{"label":"Areal","verdi":"1 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreport","verdi":"Ja"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Mellomstor","areal":"1 500 m²","undertittel":"Balansert areal for voksende bedrifter","beskrivelse":"Et allsidig lokale som gir plass til lager, kontor og varemottak i samme bygg. Ideelt for virksomheter i vekst som trenger fleksibilitet og rom for utvidelse. Inkluderer kontorseksjon med ventilasjon og moderne standard.","accent":"#5B8FA8","bilde":"Bilder/hero.png","specs":[{"label":"Areal","verdi":"1 500 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kontor","verdi":"Inkludert"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Stor","areal":"2 000 m²","undertittel":"Romslig løsning for etablerte virksomheter","beskrivelse":"Stort og fleksibelt areal med plass til omfattende lager- og logistikkoperasjoner. Planløsningen kan tilpasses med soner for lager, produksjon, showroom og kontor. To kjøreporter for effektiv varemottak og distribusjon.","accent":"#059669","bilde":"Bilder/strip-2.jpg","specs":[{"label":"Areal","verdi":"2 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreporter","verdi":"2 stk"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Maksimal","areal":"3 000 m²","undertittel":"Hele etasjen – maksimal fleksibilitet","beskrivelse":"Full etasje med ubegrenset tilpasningsmuligheter. For virksomheter som trenger et stort sammenhengende areal til lager, logistikk, produksjon eller kombinert drift. Skreddersydde løsninger for kontor, personalrom og tekniske rom.","accent":"#1e3a5f","bilde":"Bilder/strip-3.jpg","specs":[{"label":"Areal","verdi":"3 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreporter","verdi":"3 stk"},{"label":"Energiklasse","verdi":"A"}]}];
+      var EC_SLIDES = [{"navn":"Kompakt","areal":"1 000 m²","undertittel":"Effektiv løsning for mindre virksomheter","beskrivelse":"Kompakt og smart arealløsning tilpasset virksomheter som trenger et moderne lager- og kombinasjonslokale. Med 9 meters takhøyde, egen kjøreport og fleksibel planløsning får du alt du trenger under ett tak.","accent":"#c8a951","bilde":"Bilder/strip-1.png","galleri":["Bilder/strip-1.png","Bilder/hero.png","Bilder/strip-2.jpg","Bilder/strip-3.jpg"],"specs":[{"label":"Areal","verdi":"1 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreport","verdi":"Ja"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Mellomstor","areal":"1 500 m²","undertittel":"Balansert areal for voksende bedrifter","beskrivelse":"Et allsidig lokale som gir plass til lager, kontor og varemottak i samme bygg. Ideelt for virksomheter i vekst som trenger fleksibilitet og rom for utvidelse. Inkluderer kontorseksjon med ventilasjon og moderne standard.","accent":"#5B8FA8","bilde":"Bilder/hero.png","galleri":["Bilder/hero.png","Bilder/strip-1.png","Bilder/strip-2.jpg","Bilder/strip-3.jpg"],"specs":[{"label":"Areal","verdi":"1 500 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kontor","verdi":"Inkludert"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Stor","areal":"2 000 m²","undertittel":"Romslig løsning for etablerte virksomheter","beskrivelse":"Stort og fleksibelt areal med plass til omfattende lager- og logistikkoperasjoner. Planløsningen kan tilpasses med soner for lager, produksjon, showroom og kontor. To kjøreporter for effektiv varemottak og distribusjon.","accent":"#059669","bilde":"Bilder/strip-2.jpg","galleri":["Bilder/strip-2.jpg","Bilder/hero.png","Bilder/strip-1.png","Bilder/strip-3.jpg"],"specs":[{"label":"Areal","verdi":"2 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreporter","verdi":"2 stk"},{"label":"Energiklasse","verdi":"A"}]},{"navn":"Maksimal","areal":"3 000 m²","undertittel":"Hele etasjen – maksimal fleksibilitet","beskrivelse":"Full etasje med ubegrenset tilpasningsmuligheter. For virksomheter som trenger et stort sammenhengende areal til lager, logistikk, produksjon eller kombinert drift. Skreddersydde løsninger for kontor, personalrom og tekniske rom.","accent":"#1e3a5f","bilde":"Bilder/strip-3.jpg","galleri":["Bilder/strip-3.jpg","Bilder/hero.png","Bilder/strip-1.png","Bilder/strip-2.jpg"],"specs":[{"label":"Areal","verdi":"3 000 m²"},{"label":"Takhøyde","verdi":"9 meter"},{"label":"Kjøreporter","verdi":"3 stk"},{"label":"Energiklasse","verdi":"A"}]}];
     </script>
     <div class="ec-wrapper">
       <div class="ec-bg-wash" style="background: radial-gradient(ellipse at 70% 50%, #c8a95118 0%, transparent 70%);"></div>
@@ -115,11 +112,17 @@
         </div>
         <div class="ec-image-container">
           <div class="ec-image-frame visible">
-            <img src="Bilder/strip-1.png" alt="Kompakt – 1 000 m²">
+            <img src="Bilder/strip-1.png" alt="Kompakt – 1 000 m²" class="ec-main-img">
             <div class="ec-image-overlay" style="background: linear-gradient(135deg, #c8a95122 0%, transparent 50%);"></div>
           </div>
           <div class="ec-frame-corner ec-frame-corner--tl" style="border-color: #c8a951;"></div>
           <div class="ec-frame-corner ec-frame-corner--br" style="border-color: #c8a951;"></div>
+          <div class="ec-filmstrip">
+            <button class="ec-thumb active" data-src="Bilder/strip-1.png"><img src="Bilder/strip-1.png" alt="Bilde 1"></button>
+            <button class="ec-thumb" data-src="Bilder/hero.png"><img src="Bilder/hero.png" alt="Bilde 2"></button>
+            <button class="ec-thumb" data-src="Bilder/strip-2.jpg"><img src="Bilder/strip-2.jpg" alt="Bilde 3"></button>
+            <button class="ec-thumb" data-src="Bilder/strip-3.jpg"><img src="Bilder/strip-3.jpg" alt="Bilde 4"></button>
+          </div>
         </div>
       </div>
       <div class="ec-progress-bar">
@@ -148,6 +151,14 @@
             <span class="ec-progress-label">Maksimal · 3 000 m²</span>
           </button>
       </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="ec-lightbox" id="ecLightbox">
+      <button class="ec-lightbox-close" aria-label="Lukk">&times;</button>
+      <button class="ec-lightbox-prev" aria-label="Forrige">&#8249;</button>
+      <button class="ec-lightbox-next" aria-label="Neste">&#8250;</button>
+      <img class="ec-lightbox-img" src="" alt="Forstørret bilde">
+      <div class="ec-lightbox-strip"></div>
     </div>
   </section>
   </section>
@@ -211,7 +222,7 @@
       <div class="section-header">
         <span class="overline">Bærekraft</span>
         <h2>BREEAM-sertifisert nybygg</h2>
-        <p>Karihaugveien 89 bygges etter BREEAM-standarden og oppnår klassifiseringen Very Good.</p>
+        <p>Karihaugveien 89 bygges etter BREEAM-standarden og oppnår klassifiseringen Excellent.</p>
       </div>
 
       <div class="property-grid" style="margin-bottom: 3rem;">
@@ -222,7 +233,7 @@
                 <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
               </div>
               <h4>Miljøsertifisering</h4>
-              <p>BREEAM Very Good sikrer at bygget møter høye krav til miljø, energi og inneklima gjennom hele levetiden.</p>
+              <p>BREEAM Excellent sikrer at bygget møter høye krav til miljø, energi og inneklima gjennom hele levetiden.</p>
             </div>
             <div class="breeam-card">
               <div class="breeam-icon">

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" width="260" height="220">
+  <!-- Back houses (small to large, right to left) -->
+  <polygon points="210,220 260,220 260,95 235,65" fill="#cc2229"/>
+  <polygon points="180,220 230,220 230,80 205,50" fill="#e87c25"/>
+  <polygon points="150,220 200,220 200,65 175,35" fill="#c8b620"/>
+  <polygon points="120,220 170,220 170,50 145,20" fill="#8cb82b"/>
+  <!-- Front house (green A) -->
+  <polygon points="20,220 160,220 160,55 90,5" fill="#2d7a3a"/>
+  <!-- Letter A -->
+  <text x="90" y="175" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="bold" fill="white" text-anchor="middle">A</text>
+</svg>
