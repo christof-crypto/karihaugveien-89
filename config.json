@@ -1,0 +1,160 @@
+{
+  "eiendom": {
+    "navn": "Karihaugveien 89",
+    "type": "Lager / Næring",
+    "beliggenhet": "Oslo",
+    "energikarakter": "A",
+    "portefolje": "",
+    "kort_beskrivelse": "Nytt lager- og kombinasjonsbygg på Karihaugen i Oslo",
+    "hero_undertittel": "Nybygg med BREEAM-sertifisering og energiklasse A. Svært funksjonelle og fleksible lokaler med god beliggenhet og enkel tilkomst.",
+    "hero_badge": "Nybygg 2026 · OroEiendom",
+    "om_tittel": "Nybygg med høye miljøambisjoner",
+    "om_beskrivelse": [
+      "Karihaugveien 89 er et nybyggprosjekt som leverer moderne lager- og kombinasjonslokaler med høy standard. Bygget oppnår BREEAM-sertifisering og energiklasse A, og setter ny standard for bærekraftige næringsbygg på Karihaugen.",
+      "Lokalene kan tilpasses etter leietakers behov, og det er mulighet for både mindre og større arealer (fra 1 000 m²). Bygget er prosjektert med fokus på lavt energiforbruk, godt inneklima og fleksible planløsninger.",
+      "Bygget forvaltes av OroEiendom, som utvikler og forvalter attraktive næringseiendommer i Oslo-regionen med fokus på kvalitet, bærekraft og langsiktig verdiskaping."
+    ],
+    "meta_description": "Nytt BREEAM-sertifisert lager- og kombinasjonsbygg til leie i Karihaugveien 89, Oslo. Energiklasse A.",
+    "sidetittel_forside": "Karihaugveien 89 – Nytt lager- og næringsbygg til leie i Oslo",
+    "sidetittel_lokaler": "Lokaler til leie | K89",
+    "sidetittel_kontakt": "Kontakt oss | K89",
+    "breeam": "Very Good",
+    "ferdigstillelse": "2026"
+  },
+  "design": {
+    "farger": {
+      "dark": "#0f172a",
+      "charcoal": "#1e293b",
+      "steel": "#475569",
+      "steel_light": "#64748b",
+      "steel_pale": "#94a3b8",
+      "accent": "#c8a951",
+      "accent_hover": "#b8963e",
+      "accent_text": "#0f172a",
+      "green_muted": "#059669",
+      "green_dark": "#047857",
+      "off_white": "#f8fafc",
+      "warm_gray": "#f1f5f9",
+      "border": "#e2e8f0",
+      "border_light": "#f1f5f9"
+    },
+    "fonter": {
+      "heading": "'DM Serif Display', Georgia, 'Times New Roman', serif",
+      "body": "'Inter', 'Segoe UI', sans-serif",
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+    }
+  },
+  "kontakt": {
+    "telefon": "994 54 507",
+    "telefon_link": "+4799454507",
+    "epost": "co@oroeiendom.no",
+    "adresse": "Karihaugveien 89",
+    "postnummer": "0580 Oslo",
+    "forvalter": "OroEiendom",
+    "portefolje_navn": "",
+    "formsubmit_epost": "co@oroeiendom.no",
+    "copyright_navn": "OroEiendom",
+    "copyright_aar": "2026"
+  },
+  "kart": {
+    "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d10.8474!3d59.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e0000000000%3A0x0!2sKarihaugveien+89%2C+Oslo!5e0!3m2!1sno!2sno!4v1"
+  },
+  "beliggenhet": {
+    "tittel": "Sentralt på Karihaugen",
+    "beskrivelse": "God adkomst fra hovedveinettet med nærhet til E6, Ring 3 og kollektivtransport.",
+    "kort": [
+      {
+        "tittel": "Nær E6 og Ring 3",
+        "beskrivelse": "Enkel adkomst til hovedveinettet for effektiv logistikk og transport.",
+        "ikon": "vei"
+      },
+      {
+        "tittel": "Kollektivtransport",
+        "beskrivelse": "Kort vei til buss gir god tilgjengelighet til Oslo sentrum, Majorstua, Lørenskog og Lillestrøm.",
+        "ikon": "kollektiv"
+      },
+      {
+        "tittel": "Servicetilbud",
+        "beskrivelse": "Eksisterende kontorbygg med bredt servicetilbud kan inngå; kantine, treningsrom og garderober etc.",
+        "ikon": "service"
+      }
+    ]
+  },
+  "bilder": {
+    "hero": "Bilder/hero.png",
+    "bildestripe": [
+      "Bilder/strip-1.png",
+      "Bilder/strip-2.jpg",
+      "Bilder/strip-3.jpg",
+      "Bilder/strip-4.jpg",
+      "Bilder/strip-5.jpg",
+      "Bilder/strip-6.jpg",
+      "Bilder/strip-7.jpg",
+      "Bilder/strip-8.jpg",
+      "Bilder/strip-9.jpg"
+    ],
+    "cta_bakgrunn": "Bilder/cta-bakgrunn.jpg"
+  },
+  "lokaler": [],
+  "konfigurasjoner": [
+    {
+      "navn": "Kompakt",
+      "areal": "1 000 m²",
+      "undertittel": "Effektiv løsning for mindre virksomheter",
+      "beskrivelse": "Kompakt og smart arealløsning tilpasset virksomheter som trenger et moderne lager- og kombinasjonslokale. Med 9 meters takhøyde, egen kjøreport og fleksibel planløsning får du alt du trenger under ett tak.",
+      "accent": "#c8a951",
+      "bilde": "Bilder/strip-1.png",
+      "specs": [
+        { "label": "Areal", "verdi": "1 000 m²" },
+        { "label": "Takhøyde", "verdi": "9 meter" },
+        { "label": "Kjøreport", "verdi": "Ja" },
+        { "label": "Energiklasse", "verdi": "A" }
+      ]
+    },
+    {
+      "navn": "Mellomstor",
+      "areal": "1 500 m²",
+      "undertittel": "Balansert areal for voksende bedrifter",
+      "beskrivelse": "Et allsidig lokale som gir plass til lager, kontor og varemottak i samme bygg. Ideelt for virksomheter i vekst som trenger fleksibilitet og rom for utvidelse. Inkluderer kontorseksjon med ventilasjon og moderne standard.",
+      "accent": "#5B8FA8",
+      "bilde": "Bilder/hero.png",
+      "specs": [
+        { "label": "Areal", "verdi": "1 500 m²" },
+        { "label": "Takhøyde", "verdi": "9 meter" },
+        { "label": "Kontor", "verdi": "Inkludert" },
+        { "label": "Energiklasse", "verdi": "A" }
+      ]
+    },
+    {
+      "navn": "Stor",
+      "areal": "2 000 m²",
+      "undertittel": "Romslig løsning for etablerte virksomheter",
+      "beskrivelse": "Stort og fleksibelt areal med plass til omfattende lager- og logistikkoperasjoner. Planløsningen kan tilpasses med soner for lager, produksjon, showroom og kontor. To kjøreporter for effektiv varemottak og distribusjon.",
+      "accent": "#059669",
+      "bilde": "Bilder/strip-2.jpg",
+      "specs": [
+        { "label": "Areal", "verdi": "2 000 m²" },
+        { "label": "Takhøyde", "verdi": "9 meter" },
+        { "label": "Kjøreporter", "verdi": "2 stk" },
+        { "label": "Energiklasse", "verdi": "A" }
+      ]
+    },
+    {
+      "navn": "Maksimal",
+      "areal": "3 000 m²",
+      "undertittel": "Hele etasjen – maksimal fleksibilitet",
+      "beskrivelse": "Full etasje med ubegrenset tilpasningsmuligheter. For virksomheter som trenger et stort sammenhengende areal til lager, logistikk, produksjon eller kombinert drift. Skreddersydde løsninger for kontor, personalrom og tekniske rom.",
+      "accent": "#1e3a5f",
+      "bilde": "Bilder/strip-3.jpg",
+      "specs": [
+        { "label": "Areal", "verdi": "3 000 m²" },
+        { "label": "Takhøyde", "verdi": "9 meter" },
+        { "label": "Kjøreporter", "verdi": "3 stk" },
+        { "label": "Energiklasse", "verdi": "A" }
+      ]
+    }
+  ],
+  "footer": {
+    "beskrivelse": "Karihaugveien 89 er et nybyggprosjekt forvaltet av OroEiendom. BREEAM-sertifisert med energiklasse A."
+  }
+}

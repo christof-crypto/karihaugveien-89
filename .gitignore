@@ -1,0 +1,5 @@
+node_modules/
+.claude/
+_lag_word.js
+package-lock.json
+*.docx

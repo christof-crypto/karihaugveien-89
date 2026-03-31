@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{eiendom.sidetittel_forside}}</title>
+  <meta name="description" content="{{eiendom.meta_description}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{design.fonter.google_fonts_url}}" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="{{kontakt.forvalter}}">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#lokaler">Lokaler</a></li>
+        <li><a href="#beliggenhet">Beliggenhet</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO + OM PROSJEKTET — sticky hero med tekst-overlay -->
+  <div class="hero-parallax-wrap">
+    <!-- Sticky hero-bilde bak -->
+    <div class="hero-sticky">
+      <div class="hero-image"></div>
+      <div class="hero-overlay hero-overlay--subtle"></div>
+      <div class="hero-scroll-hint">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </div>
+
+    <!-- Tomt spacer-lag = fullscreen hero uten tekst -->
+    <div class="hero-spacer"></div>
+
+    <!-- Tekst-overlay som scroller over hero -->
+    <section class="hero-text-overlay">
+      <div class="hero-text-content">
+        <span class="overline" style="color: var(--steel-light);">{{eiendom.hero_badge}}</span>
+        <h1>{{eiendom.navn}}</h1>
+        <p class="hero-text-sub">{{eiendom.kort_beskrivelse}}</p>
+
+        <h3 style="margin-top: 2.5rem;">{{eiendom.om_tittel}}</h3>
+        {{OM_AVSNITT}}
+
+        <div class="key-facts" style="margin-top: 2.5rem;">
+          <div class="fact-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 21v-4h6v4M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
+            </div>
+            <div class="fact-label">Status</div>
+            <div class="fact-value" style="color: var(--accent);">Nybygg</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+            </div>
+            <div class="fact-label">BREEAM</div>
+            <div class="fact-value" style="color: var(--green-muted);">{{eiendom.breeam}}</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="fact-label">Energiklasse</div>
+            <div class="fact-value" style="color: var(--green-muted);">{{eiendom.energikarakter}}</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="fact-label">Ferdigstillelse</div>
+            <div class="fact-value">{{eiendom.ferdigstillelse}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 3. LOKALER TIL LEIE — karusell -->
+  <section id="lokaler">
+    {{KARUSELL_HTML}}
+  </section>
+
+  <!-- 4. BELIGGENHET / KART -->
+  <section id="beliggenhet" class="section section-gray reveal-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline">Beliggenhet</span>
+        <h2>{{beliggenhet.tittel}}</h2>
+        <p>{{beliggenhet.beskrivelse}}</p>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="{{kart.google_maps_embed_url}}"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-info-bar">
+          <div class="map-address">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            {{kontakt.adresse}}, {{kontakt.postnummer}}
+          </div>
+          <a href="tel:{{kontakt.telefon_link}}" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+            Ring oss: {{kontakt.telefon}}
+          </a>
+        </div>
+      </div>
+
+      <div class="location-grid">
+        {{BELIGGENHET_KORT}}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ENERGI & BREEAM -->
+  <section class="section reveal-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline">Bærekraft</span>
+        <h2>BREEAM-sertifisert nybygg</h2>
+        <p>Karihaugveien 89 bygges etter BREEAM-standarden og oppnår klassifiseringen {{eiendom.breeam}}.</p>
+      </div>
+
+      <div class="property-grid" style="margin-bottom: 3rem;">
+        <div class="property-text" style="max-width: 100%;">
+          <div class="breeam-grid">
+            <div class="breeam-card">
+              <div class="breeam-icon">
+                <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+              </div>
+              <h4>Miljøsertifisering</h4>
+              <p>BREEAM {{eiendom.breeam}} sikrer at bygget møter høye krav til miljø, energi og inneklima gjennom hele levetiden.</p>
+            </div>
+            <div class="breeam-card">
+              <div class="breeam-icon">
+                <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h4>Energiklasse A</h4>
+              <p>Bygget prosjekteres med beste energiklasse, noe som betyr svært lavt energiforbruk og reduserte driftskostnader.</p>
+            </div>
+            <div class="breeam-card">
+              <div class="breeam-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3v18M5.5 6.5l13 11M5.5 17.5l13-11"/></svg>
+              </div>
+              <h4>Moderne standard</h4>
+              <p>Nybygget leverer topp moderne fasiliteter med fokus på fleksibilitet, godt inneklima og lave driftskostnader.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="energy-section">
+          <div class="energy-header">
+            <div class="energy-badge">{{eiendom.energikarakter}}</div>
+            <div>
+              <h3>Energiklasse {{eiendom.energikarakter}}</h3>
+              <p>Nybygget prosjekteres med beste energiklasse</p>
+            </div>
+          </div>
+          {{ENERGI_BARS}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA -->
+  <section class="ec-cta-section reveal-section">
+    <div class="ec-cta-inner">
+      <span class="overline" style="color: var(--steel-light);">Interessert?</span>
+      <h2 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--dark); margin: 0.8rem 0;">Ta kontakt for visning eller mer informasjon</h2>
+      <p style="color: var(--steel); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; font-size: 0.92rem;">Vi tilpasser lokaler etter dine behov. Kontakt oss for en uforpliktende samtale om mulighetene i nybygget.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="kontakt.html" class="btn btn-primary" style="padding: 0.9rem 2.5rem;">Send henvendelse</a>
+        <a href="tel:{{kontakt.telefon_link}}" class="btn btn-outline" style="padding: 0.9rem 2.5rem; color: var(--dark); border-color: var(--border);">Ring {{kontakt.telefon}}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="{{kontakt.forvalter}}">
+        <p>{{footer.beskrivelse}}</p>
+      </div>
+      <div>
+        <h4>Navigasjon</h4>
+        <ul class="footer-links">
+          <li><a href="#lokaler">Lokaler</a></li>
+          <li><a href="#beliggenhet">Beliggenhet</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/></svg>
+          <span>{{kontakt.adresse}}<br>{{kontakt.postnummer}}</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:{{kontakt.telefon_link}}">{{kontakt.telefon}}</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:{{kontakt.epost}}">{{kontakt.epost}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{kontakt.copyright_aar}} {{kontakt.copyright_navn}}. Alle rettigheter reservert.</span>
+      <span>{{kontakt.portefolje_navn}}</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

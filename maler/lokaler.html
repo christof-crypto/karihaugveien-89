@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{eiendom.sidetittel_lokaler}}</title>
+  <meta name="description" content="Se ledige lager- og næringslokaler til leie i {{eiendom.navn}}, {{eiendom.beliggenhet}}. Plantegninger og beskrivelser av tilgjengelige arealer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{design.fonter.google_fonts_url}}" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="{{kontakt.forvalter}}">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="lokaler.html" class="active">Lokaler til leie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="tel:{{kontakt.telefon_link}}" class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{kontakt.telefon}}
+      </a>
+      <button class="hamburger" aria-label="Meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- AREALKONFIGURASJON KARUSELL -->
+  {{KARUSELL_HTML}}
+
+  <!-- CTA -->
+  <section class="ec-cta-section">
+    <div class="ec-cta-inner">
+      <span class="overline" style="color: var(--steel-light);">Skreddersydd løsning?</span>
+      <h2 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--dark); margin: 0.8rem 0;">Vi tilpasser lokaler etter dine behov</h2>
+      <p style="color: var(--steel); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; font-size: 0.92rem;">Har du spesielle krav til areal, planløsning eller fasiliteter? Ta kontakt for en uforpliktende samtale om mulighetene.</p>
+      <a href="kontakt.html" class="btn btn-primary" style="padding: 0.9rem 2.5rem;">Kontakt oss</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="{{kontakt.forvalter}}">
+        <p>{{footer.beskrivelse}}</p>
+      </div>
+      <div>
+        <h4>Sider</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="lokaler.html">Lokaler til leie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/></svg>
+          <span>{{kontakt.adresse}}<br>{{kontakt.postnummer}}</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:{{kontakt.telefon_link}}">{{kontakt.telefon}}</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:{{kontakt.epost}}">{{kontakt.epost}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{kontakt.copyright_aar}} {{kontakt.copyright_navn}}. Alle rettigheter reservert.</span>
+      <span>{{kontakt.portefolje_navn}}</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
