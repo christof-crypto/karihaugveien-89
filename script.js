@@ -1,3 +1,93 @@
+// ===== SCROLL-DRIVEN VIDEO FRAMES =====
+(function() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const FRAME_COUNT = 60;
+  const frames = [];
+  let loaded = 0;
+  let currentFrame = 0;
+  let targetFrame = 0;
+  let animating = false;
+
+  // Preload all frames
+  for (let i = 1; i <= FRAME_COUNT; i++) {
+    const img = new Image();
+    img.src = `Bilder/frames/frame-${String(i).padStart(3, '0')}.jpg`;
+    img.onload = () => {
+      loaded++;
+      if (loaded === 1) drawFrame(0); // Draw first frame immediately
+    };
+    frames.push(img);
+  }
+
+  function drawFrame(index) {
+    const img = frames[index];
+    if (!img || !img.complete) return;
+
+    // Set canvas size to match display
+    const rect = canvas.getBoundingClientRect();
+    if (canvas.width !== rect.width || canvas.height !== rect.height) {
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    }
+
+    // Cover-fit: fill canvas while maintaining aspect ratio
+    const imgRatio = img.width / img.height;
+    const canvasRatio = canvas.width / canvas.height;
+    let sx = 0, sy = 0, sw = img.width, sh = img.height;
+
+    if (imgRatio > canvasRatio) {
+      // Image wider than canvas — crop sides
+      sw = img.height * canvasRatio;
+      sx = (img.width - sw) / 2;
+    } else {
+      // Image taller — crop top/bottom
+      sh = img.width / canvasRatio;
+      sy = (img.height - sh) / 2;
+    }
+
+    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+  }
+
+  // Scroll handler
+  const wrap = document.querySelector('.hero-parallax-wrap');
+  if (!wrap) return;
+
+  // Smooth lerp loop — interpolates toward target frame
+  function animateFrames() {
+    if (Math.abs(targetFrame - currentFrame) < 0.5) {
+      currentFrame = targetFrame;
+      drawFrame(Math.round(currentFrame));
+      animating = false;
+      return;
+    }
+    // Lerp: ease toward target (higher = snappier, lower = smoother)
+    currentFrame += (targetFrame - currentFrame) * 0.18;
+    drawFrame(Math.round(currentFrame));
+    requestAnimationFrame(animateFrames);
+  }
+
+  function onScroll() {
+    const rect = wrap.getBoundingClientRect();
+    const scrollHeight = wrap.offsetHeight - window.innerHeight;
+    if (scrollHeight <= 0) return;
+
+    const scrolled = -rect.top;
+    const progress = Math.max(0, Math.min(1, scrolled / scrollHeight));
+    targetFrame = Math.min(FRAME_COUNT - 1, progress * (FRAME_COUNT - 1));
+
+    if (!animating) {
+      animating = true;
+      requestAnimationFrame(animateFrames);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => drawFrame(Math.round(currentFrame)));
+})();
+
 // ===== MOBILE MENU =====
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
@@ -16,17 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.remove('active');
       });
     });
-  }
-
-  // ===== HERO SLIDESHOW =====
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  if (heroSlides.length > 1) {
-    let heroIdx = 0;
-    setInterval(() => {
-      heroSlides[heroIdx].classList.remove('active');
-      heroIdx = (heroIdx + 1) % heroSlides.length;
-      heroSlides[heroIdx].classList.add('active');
-    }, 5000);
   }
 
   // ===== CONTACT FORM =====

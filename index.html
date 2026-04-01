@@ -31,15 +31,11 @@
     </div>
   </nav>
 
-  <!-- HERO + OM PROSJEKTET — sticky hero med tekst-overlay -->
+  <!-- HERO + OM PROSJEKTET — scroll-drevet video -->
   <div class="hero-parallax-wrap">
-    <!-- Sticky hero-bilde bak med slideshow -->
+    <!-- Sticky hero med scroll-driven frame animation -->
     <div class="hero-sticky">
-      <div class="hero-slideshow">
-        <div class="hero-slide active" style="background-image: url('Bilder/hero.png');"></div>
-        <div class="hero-slide" style="background-image: url('Bilder/strip-5.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('Bilder/strip-1.png');"></div>
-      </div>
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
       <div class="hero-overlay hero-overlay--subtle"></div>
       <div class="hero-headline">
         <h1 class="hero-headline-text">Nybygg — Last mile lager sentralt i Oslo</h1>
@@ -52,8 +48,8 @@
       </div>
     </div>
 
-    <!-- Tomt spacer-lag = fullscreen hero uten tekst -->
-    <div class="hero-spacer"></div>
+    <!-- Scroll spacer — controls video playback speed -->
+    <div class="hero-spacer" style="height: 180vh;"></div>
 
     <!-- Tekst-overlay som scroller over hero — glassbakgrunn -->
     <section class="hero-text-overlay">
