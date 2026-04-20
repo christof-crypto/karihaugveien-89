@@ -108,8 +108,7 @@
       "galleri": [
         "Bilder/liten-1.jpg",
         "Bilder/liten-plan.jpg",
-        "Bilder/liten-2.jpg",
-        "Bilder/liten-3.jpg"
+        "Bilder/liten-2.jpg"
       ],
       "specs": [
         { "label": "Lager", "verdi": "1 000 m²" },
@@ -129,8 +128,7 @@
       "galleri": [
         "Bilder/medium-1.jpg",
         "Bilder/medium-plan.jpg",
-        "Bilder/medium-2.jpg",
-        "Bilder/medium-3.jpg"
+        "Bilder/medium-2.jpg"
       ],
       "specs": [
         { "label": "Lager", "verdi": "1 100 m²" },
@@ -150,8 +148,7 @@
       "galleri": [
         "Bilder/stor-1.jpg",
         "Bilder/stor-plan.jpg",
-        "Bilder/stor-2.jpg",
-        "Bilder/stor-3.jpg"
+        "Bilder/stor-2.jpg"
       ],
       "specs": [
         { "label": "Lager", "verdi": "2 100 m²" },
@@ -171,8 +168,7 @@
       "galleri": [
         "Bilder/xl-1.jpg",
         "Bilder/xl-plan.jpg",
-        "Bilder/xl-2.jpg",
-        "Bilder/xl-3.jpg"
+        "Bilder/xl-2.jpg"
       ],
       "specs": [
         { "label": "Lager", "verdi": "2 100 m²" },
