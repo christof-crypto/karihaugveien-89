@@ -1,5 +1,10 @@
 node_modules/
 .claude/
+.omc/
 _lag_word.js
 package-lock.json
 *.docx
+*.pptx
+~$*
+Bilder/video1.mp4
+Bilder/Skjermbilde*
